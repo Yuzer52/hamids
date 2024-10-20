@@ -1,0 +1,257 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Dynamic Gradient Background for Header */
+header {
+    text-align: center;
+    background: linear-gradient(45deg, #d4af37, #c0c0c0, #000000);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+    padding: 20px;
+    color: #ffffff;
+}
+
+/* Keyframes for dynamic gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Circular Logo Styling */
+header .logo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #d4af37; /* Golden border around the circle */
+}
+
+/* Logo Alignment */
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #d4af37; /* Golden */
+    margin-top: 15px;
+}
+
+/* About Section */
+.about {
+    padding: 50px;
+    text-align: center;
+    background-color: #1a1a1a;
+    font-family: 'Georgia', serif; /* Enhanced font for a classic look */
+}
+
+.about h2 {
+    font-size: 2.5rem;  /* Larger heading */
+    margin-bottom: 30px;
+    color: #c0c0c0; /* Silver */
+}
+
+.about p {
+    font-size: 1.5rem;  /* Larger font size for readability */
+    line-height: 1.8;   /* Increased line height for better text flow */
+    color: #ffffff;
+    margin: 0 auto;
+    max-width: 900px;   /* Restricts the width of the paragraph for better reading experience */
+}
+
+/* Certificates Section */
+.certificates {
+    padding: 40px;
+    background-color: #000000;
+    text-align: center;
+}
+
+.certificates h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #c0c0c0; /* Silver */
+}
+
+.certificate-gallery img {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    border: 2px solid #d4af37; /* Golden */
+}
+
+/* Company Interior Section */
+.interior {
+    padding: 40px;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+.interior h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #c0c0c0; /* Silver */
+}
+
+.interior-gallery img {
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    border: 2px solid #d4af37; /* Golden */
+}
+
+/* Contact Section */
+.contact {
+    padding: 40px;
+    background-color: #1f1f1f;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #c0c0c0; /* Silver */
+}
+
+.contact form {
+    display: inline-block;
+    text-align: left;
+}
+
+.contact label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.contact input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #c0c0c0;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.contact button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #d4af37; /* Golden */
+    color: #000000;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact button:hover {
+    background-color: #c0c0c0; /* Silver */
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px;
+    color: #d4af37; /* Golden */
+}
+
+/* ========================= */
+/* Responsive Design (Media Queries) */
+/* ========================= */
+
+/* Smaller devices like phones */
+@media (max-width: 768px) {
+    header .logo img {
+        width: 100px;
+        height: 100px; /* Smaller circular logo */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Smaller text for header */
+    }
+
+    .about h2,
+    .certificates h2,
+    .interior h2,
+    .contact h2 {
+        font-size: 1.5rem; /* Slightly smaller section headers */
+    }
+
+    .about p {
+        font-size: 1.2rem; /* Slightly smaller about text */
+    }
+
+    .certificate-gallery img,
+    .interior-gallery img {
+        width: 100%; /* Ensure images are responsive */
+        height: auto;
+    }
+
+    .about,
+    .certificates,
+    .interior,
+    .contact {
+        padding: 20px; /* Less padding on smaller screens */
+    }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header .logo img {
+        width: 120px;
+        height: 120px; /* Medium-sized circular logo */
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .about,
+    .certificates,
+    .interior,
+    .contact {
+        padding: 30px; /* Medium padding for tablet screens */
+    }
+}
+
+/* Large screens like desktops */
+@media (min-width: 1025px) {
+    header .logo img {
+        width: 150px;
+        height: 150px; /* Larger circular logo */
+    }
+
+    .certificate-gallery img {
+        width: 200px; /* Larger images on larger screens */
+    }
+
+    .interior-gallery img {
+        width: 300px;
+    }
+
+    .about,
+    .certificates,
+    .interior,
+    .contact {
+        padding: 40px; /* Default padding */
+    }
+}
