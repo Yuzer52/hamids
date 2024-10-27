@@ -12,7 +12,7 @@ body {
     color: #ffffff;
 }
 
-/* Dynamic Gradient Background for Header */
+/* Header Styling */
 header {
     text-align: center;
     background: linear-gradient(45deg, #d4af37, #c0c0c0, #000000);
@@ -20,6 +20,9 @@ header {
     animation: gradientAnimation 10s ease infinite;
     padding: 20px;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Keyframes for dynamic gradient animation */
@@ -49,50 +52,103 @@ header .logo {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
-header h1 {
+/* Company Names Styling */
+header .company-names {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Primary Company Name Styling */
+header .company-names h1 {
     font-size: 2.5rem;
     color: #d4af37; /* Golden */
-    margin-top: 15px;
+    margin: 0;
 }
+
+/* Secondary Company Name Styling */
+header .company-names h2 {
+    font-size: 1.5rem;
+    color: #c0c0c0; /* Silver */
+    margin: 0;
+}
+/* QR Code Styling */
+.about .qr-code {
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+    margin-top: 20px;
+    border: 3px solid #d4af37; /* Golden border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    background-color: #1a1a1a; /* Background matching section */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Optional: Add a hover effect */
+.about .qr-code:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 
 /* About Section */
 .about {
     padding: 50px;
     text-align: center;
     background-color: #1a1a1a;
-    font-family: 'Georgia', serif; /* Enhanced font for a classic look */
+    font-family: 'Georgia', serif;
 }
 
 .about h2 {
-    font-size: 2.5rem;  /* Larger heading */
+    font-size: 2.5rem;
     margin-bottom: 30px;
     color: #c0c0c0; /* Silver */
 }
 
 .about p {
-    font-size: 1.5rem;  /* Larger font size for readability */
-    line-height: 1.8;   /* Increased line height for better text flow */
+    font-size: 1.5rem;
+    line-height: 1.8;
     color: #ffffff;
     margin: 0 auto;
-    max-width: 900px;   /* Restricts the width of the paragraph for better reading experience */
+    max-width: 900px;
 }
 
-/* Certificates Section */
-.certificates {
+.about a {
+    color: #d4af37; /* Golden for links */
+    text-decoration: none;
+}
+
+.about a:hover {
+    color: #c0c0c0; /* Silver on hover */
+}
+
+/* Vision Section */
+.vision {
     padding: 40px;
-    background-color: #000000;
+    background-color: #1a1a1a;
     text-align: center;
 }
 
-.certificates h2 {
-    font-size: 2rem;
+.vision h2 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
     color: #c0c0c0; /* Silver */
 }
 
-.certificate-gallery img {
+.vision p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #ffffff;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.vision-gallery img {
     width: 200px;
     height: auto;
     margin: 10px;
@@ -166,6 +222,24 @@ header h1 {
     background-color: #c0c0c0; /* Silver */
 }
 
+/* Sister Organization Section */
+.sister-organization {
+    padding: 20px;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+.sister-organization h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #c0c0c0; /* Silver */
+}
+
+.sister-organization p {
+    font-size: 1.5rem;
+    color: #d4af37; /* Golden */
+}
+
 /* Footer */
 footer {
     background-color: #000000;
@@ -174,43 +248,45 @@ footer {
     color: #d4af37; /* Golden */
 }
 
-/* ========================= */
 /* Responsive Design (Media Queries) */
-/* ========================= */
 
 /* Smaller devices like phones */
 @media (max-width: 768px) {
     header .logo img {
         width: 100px;
-        height: 100px; /* Smaller circular logo */
+        height: 100px;
     }
 
     header h1 {
-        font-size: 2rem; /* Smaller text for header */
+        font-size: 2rem;
     }
 
     .about h2,
-    .certificates h2,
+    .vision h2,
     .interior h2,
-    .contact h2 {
-        font-size: 1.5rem; /* Slightly smaller section headers */
+    .contact h2,
+    .sister-organization h2 {
+        font-size: 1.5rem;
     }
 
-    .about p {
-        font-size: 1.2rem; /* Slightly smaller about text */
+    .about p,
+    .vision p,
+    .sister-organization p {
+        font-size: 1.2rem;
     }
 
-    .certificate-gallery img,
+    .vision-gallery img,
     .interior-gallery img {
-        width: 100%; /* Ensure images are responsive */
+        width: 100%;
         height: auto;
     }
 
     .about,
-    .certificates,
+    .vision,
     .interior,
-    .contact {
-        padding: 20px; /* Less padding on smaller screens */
+    .contact,
+    .sister-organization {
+        padding: 20px;
     }
 }
 
@@ -218,7 +294,7 @@ footer {
 @media (min-width: 769px) and (max-width: 1024px) {
     header .logo img {
         width: 120px;
-        height: 120px; /* Medium-sized circular logo */
+        height: 120px;
     }
 
     header h1 {
@@ -226,10 +302,11 @@ footer {
     }
 
     .about,
-    .certificates,
+    .vision,
     .interior,
-    .contact {
-        padding: 30px; /* Medium padding for tablet screens */
+    .contact,
+    .sister-organization {
+        padding: 30px;
     }
 }
 
@@ -237,21 +314,19 @@ footer {
 @media (min-width: 1025px) {
     header .logo img {
         width: 150px;
-        height: 150px; /* Larger circular logo */
+        height: 150px;
     }
 
-    .certificate-gallery img {
-        width: 200px; /* Larger images on larger screens */
-    }
-
+    .vision-gallery img,
     .interior-gallery img {
-        width: 300px;
+        width: 200px;
     }
 
     .about,
-    .certificates,
+    .vision,
     .interior,
-    .contact {
-        padding: 40px; /* Default padding */
+    .contact,
+    .sister-organization {
+        padding: 40px;
     }
 }
