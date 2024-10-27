@@ -155,6 +155,25 @@ header .company-names h2 {
     border: 2px solid #d4af37; /* Golden */
 }
 
+.machine {
+    padding: 40px;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+.machine h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #c0c0c0; /* Silver */
+}
+
+.machine_gallery img {
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    border: 2px solid #d4af37; /* Golden */
+}
+
+
 /* Company Interior Section */
 .interior {
     padding: 40px;
